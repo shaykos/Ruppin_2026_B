@@ -1,0 +1,11 @@
+Welcome to File 2
+
+This is a demonstration text file showing basic content organization.
+It includes multiple lines and can serve as a template for your project.
+
+Key Points:
+- Clear structure
+- Easy to read
+- Ready for expansion
+
+Feel free to modify this content as needed for your assignment.

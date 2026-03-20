@@ -1,0 +1,3 @@
+The quick brown fox jumps over the lazy dog.
+This pangram contains every letter of the English alphabet.
+It's commonly used for testing fonts and keyboards.

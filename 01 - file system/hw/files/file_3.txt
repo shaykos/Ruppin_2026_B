@@ -1,0 +1,11 @@
+Welcome to file_3.txt
+
+This is a sample text file containing placeholder content.
+You can use this as a starting point for your project.
+
+Features:
+- Easy to read format
+- Simple structure
+- Ready for customization
+
+Feel free to modify this content as needed for your assignment.

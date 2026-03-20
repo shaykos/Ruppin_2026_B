@@ -1,0 +1,11 @@
+Welcome to File 1
+
+This is a sample text file demonstrating basic file content.
+You can add your own text here to replace this placeholder.
+
+Key points:
+- Files help organize data
+- Text files are human-readable
+- Use them to store notes, code, or configuration
+
+Feel free to modify this content as needed.
