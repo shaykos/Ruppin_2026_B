@@ -1,14 +1,26 @@
+GET http://localhost:8000/api/users
 
-GET http://localhost:8000
-
-###
-
-POST http://localhost:8000
 
 ###
+POST http://localhost:8000/api/users
+Content-Type: application/json
 
-PUT http://localhost:8000
+{
+  "name": "kuku",
+  "email": "kuku@example.com"
+}
+
 
 ###
+PUT http://localhost:8000/api/users/1
+Content-Type: application/json
 
-DELETE http://localhost:8000
+{
+  "name": "updated test",
+  "email": "updated@example.com"
+}
+
+
+
+###
+DELETE http://localhost:8000/api/users/1
