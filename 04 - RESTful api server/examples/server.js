@@ -6,9 +6,27 @@ const PORT = process.env.PORT;
 
 // יוצרים את הסרבר
 let server = createServer((req, res) => {
-    if (req.url.includes('kuku')) {
-        res.writeHead(200, { "Content-Type": "text/plain" });
-        res.end("hello");
+    switch(req.method){
+        case 'GET':
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World! GET request received');
+            break;
+        case 'POST':
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World! POST request received');
+            break;
+        case 'PUT':
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World! PUT request received');
+            break;
+        case 'DELETE':
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World! DELETE request received');
+            break;
+        default:
+            res.writeHead(405, {'Content-Type': 'text/plain'});
+            res.end('Method Not Allowed');
+
     }
 });
 
