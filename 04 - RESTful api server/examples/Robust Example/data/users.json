@@ -3,5 +3,12 @@
         "name": "momo Doe",
         "email": "momo@gmail.com",
         "id": 2
+    },
+    {
+        "name": "lulu",
+        "email": "lulu@gmail.com",
+        "role": "veteran",
+        "password": "1234",
+        "id": 2
     }
 ]

@@ -38,6 +38,8 @@ startAutoPlay();
 
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const forms = Array.from(document.querySelectorAll(".form-panel"));
+const registerForm = document.getElementById("register-form");
+const loginForm = document.getElementById("login-form");
 
 function activateTab(targetId) {
     tabs.forEach((tab) => {
@@ -55,11 +57,49 @@ tabs.forEach((tab) => {
     tab.addEventListener("click", () => activateTab(tab.dataset.target));
 });
 
-forms.forEach((form) => {
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const mode = form.id === "login-form" ? "Login" : "Registration";
-        alert(`${mode} submitted successfully.`);
-        form.reset();
+async function registerUser(payload) {
+    const response = await fetch("/api/user", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
     });
-});
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+        throw new Error(result.error || "Registration failed");
+    }
+
+    return result;
+}
+
+if (loginForm) {
+    loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        alert("Login submitted successfully.");
+        loginForm.reset();
+    });
+}
+
+if (registerForm) {
+    registerForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const payload = {
+            name: document.querySelector("#register-name")?.value.trim(),
+            email: document.querySelector("#register-email")?.value.trim(),
+            role: document.querySelector("#register-role")?.value,
+            password: document.querySelector("#register-password")?.value
+        };
+
+        try {
+            await registerUser(payload);
+            alert("Registration submitted successfully.");
+            registerForm.reset();
+        } catch (error) {
+            alert(error.message || "Registration failed");
+        }
+    });
+}
