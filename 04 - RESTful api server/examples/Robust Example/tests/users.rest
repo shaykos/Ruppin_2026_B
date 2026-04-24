@@ -1,0 +1,25 @@
+GET http://localhost:9000/api/users
+
+###
+
+POST http://localhost:9000/api/users
+Content-Type: application/json
+
+{
+    "name": "momo Doe",
+    "email": "momo@gmail.com"
+}
+
+### 
+
+PUT http://localhost:9000/api/users/1
+Content-Type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "jane.doe@gmail.com"
+}
+
+###
+
+DELETE http://localhost:9000/api/users/1
