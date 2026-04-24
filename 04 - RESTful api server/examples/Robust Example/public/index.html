@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Valor Network | Soldiers and Veterans</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/index.css">
+    <script type="module" src="scripts/index.js"></script>
+</head>
+<body>
+	<header class="site-header">
+		<div class="brand-wrap">
+			<span class="brand-star" aria-hidden="true">★</span>
+			<div>
+				<h1>Valor Network</h1>
+				<p>Serving soldiers and veterans</p>
+			</div>
+		</div>
+		<nav class="top-nav" aria-label="Primary navigation">
+			<a href="#home">Home</a>
+			<a href="#mission">Mission</a>
+			<a href="#auth">Join</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home" class="hero-section">
+			<div class="hero-content">
+				<p class="eyebrow">United Service Community</p>
+				<h2>One place for active soldiers and proud veterans.</h2>
+				<p class="intro">
+					Connect with support programs, career resources, and trusted peers in a secure platform built for military families.
+				</p>
+			</div>
+
+			<div class="slider" aria-label="Veterans and soldiers image slider">
+				<div class="slides">
+					<article class="slide active" data-caption="Honoring service in every generation.">
+						<img src="./assets/hero-1.svg" alt="Soldier standing with an American style backdrop">
+					</article>
+					<article class="slide" data-caption="Stronger together after every mission.">
+						<img src="./assets/hero-2.svg" alt="Veterans community gathered together">
+					</article>
+					<article class="slide" data-caption="New opportunities for those who served.">
+						<img src="./assets/hero-3.svg" alt="Veteran transitioning to civilian career pathway">
+					</article>
+				</div>
+
+				<div class="slider-bar">
+					<p id="slider-caption">Honoring service in every generation.</p>
+					<div class="slider-controls">
+						<button id="prev-slide" type="button" aria-label="Previous slide">&#8592;</button>
+						<button id="next-slide" type="button" aria-label="Next slide">&#8594;</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="mission" class="mission-section">
+			<h3>Our Mission</h3>
+			<p>
+				Valor Network helps service members and veterans find clear support through mentorship, mental wellness resources,
+				and verified opportunities. We keep things simple, respectful, and action-focused.
+			</p>
+		</section>
+
+		<section id="auth" class="auth-section">
+			<div class="auth-card">
+				<div class="auth-tabs" role="tablist" aria-label="Authentication forms">
+					<button class="tab active" id="tab-login" type="button" data-target="login-form" role="tab" aria-selected="true">Login</button>
+					<button class="tab" id="tab-register" type="button" data-target="register-form" role="tab" aria-selected="false">Register</button>
+				</div>
+
+				<form id="login-form" class="form-panel active" autocomplete="on">
+					<h4>Welcome back</h4>
+					<label for="login-email">Email</label>
+					<input id="login-email" type="email" placeholder="name@service.org" required>
+
+					<label for="login-password">Password</label>
+					<input id="login-password" type="password" placeholder="Enter your password" required>
+
+					<button type="submit" class="primary-btn">Login</button>
+				</form>
+
+				<form id="register-form" class="form-panel" autocomplete="on">
+					<h4>Create your account</h4>
+					<label for="register-name">Full name</label>
+					<input id="register-name" type="text" placeholder="First and last name" required>
+
+					<label for="register-email">Email</label>
+					<input id="register-email" type="email" placeholder="name@service.org" required>
+
+					<label for="register-role">Service status</label>
+					<select id="register-role" required>
+						<option value="" disabled selected>Select one</option>
+						<option value="active">Active Duty</option>
+						<option value="reserve">Reserve</option>
+						<option value="veteran">Veteran</option>
+						<option value="family">Military Family</option>
+					</select>
+
+					<label for="register-password">Password</label>
+					<input id="register-password" type="password" placeholder="Create a strong password" required>
+
+					<button type="submit" class="primary-btn">Register</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	
+</body>
+</html>

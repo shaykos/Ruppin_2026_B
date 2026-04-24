@@ -1,0 +1,28 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Soldier silhouette with stars</title>
+  <desc id="desc">An abstract patriotic scene with a soldier silhouette and stars in red blue and white.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3f8d"/>
+      <stop offset="1" stop-color="#0a2450"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect y="470" width="1280" height="250" fill="#b22234"/>
+  <rect y="520" width="1280" height="30" fill="#fff" opacity="0.85"/>
+  <rect y="580" width="1280" height="30" fill="#fff" opacity="0.85"/>
+  <path d="M650 220c-42 0-76 34-76 76 0 30 17 56 42 68v36h68v-36c25-12 42-38 42-68 0-42-34-76-76-76z" fill="#f5f8ff"/>
+  <rect x="600" y="390" width="100" height="210" rx="16" fill="#f5f8ff"/>
+  <rect x="555" y="430" width="42" height="140" rx="20" fill="#f5f8ff"/>
+  <rect x="703" y="430" width="42" height="140" rx="20" fill="#f5f8ff"/>
+  <rect x="605" y="592" width="32" height="110" rx="12" fill="#f5f8ff"/>
+  <rect x="663" y="592" width="32" height="110" rx="12" fill="#f5f8ff"/>
+  <g fill="#fff" opacity="0.92">
+    <circle cx="190" cy="130" r="6"/>
+    <circle cx="250" cy="90" r="6"/>
+    <circle cx="300" cy="135" r="6"/>
+    <circle cx="1110" cy="120" r="6"/>
+    <circle cx="1040" cy="150" r="6"/>
+    <circle cx="980" cy="95" r="6"/>
+  </g>
+</svg>
