@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start":"node --env-file=./config/.env server.js",
-    "dev": "node --env-file=./config/.env --watch server.js"
+    "dev": "node --env-file=config/.env --watch server.js"
   },
   "keywords": [],
   "author": "",

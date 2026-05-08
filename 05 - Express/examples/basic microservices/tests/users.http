@@ -1,0 +1,26 @@
+@PORT=4321
+@HOST=localhost
+
+### get all users
+GET http://{{HOST}}:{{PORT}}/api/users
+
+### create a new user
+POST http://{{HOST}}:{{PORT}}/api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password123"
+}
+
+### update a user
+PUT http://{{HOST}}:{{PORT}}/api/users/1e149831-c0ec-441b-a9cf-e2ff45114bb2
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "121212123"
+}
+
