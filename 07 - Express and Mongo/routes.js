@@ -1,8 +1,8 @@
 import { Router } from "express";
-import userRouter from "./features/users/user.routes.js";
+import moviesRouter from "./features/movies/movies.router.js";
 
 const router = Router();
 
-//router.use('/user', userRouter);
+router.use('/movies', moviesRouter);
 
 export default router;

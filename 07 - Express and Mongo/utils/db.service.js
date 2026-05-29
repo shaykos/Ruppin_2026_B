@@ -1,42 +1,46 @@
 import { MongoClient } from "mongodb";
 
-export default class DBService {
-    client = new MongoClient(process.env.MONGODB_URI);
-    dbName = process.env.DB_NAME || "stam";
-
-    static async connect() {
-        try {
-            await this.client.connect();
-            console.log('Connected to MongoDB');
-        } catch (error) {
-            console.error('Error connecting to MongoDB:', error);
-            throw error;
-        }
+class DBServices {
+    constructor() {
+        this.client = new MongoClient(process.env.MONGO_URI);
+        this.db = null;
     }
 
-    static async disconnect() {
-        try {
-            await this.client.close();
-            console.log('Disconnected from MongoDB');
-        } catch (error) {
-            console.error('Error disconnecting from MongoDB:', error);
-            throw error;
-        }
+    async connect() {
+        if (this.db) return this.db;
+
+        await this.client.connect();
+        this.db = this.client.db(process.env.DB_NAME);
+
+        return this.db;
     }
 
-    static getDocuments(collection, filter = {}, projection = {}) {
-        return this.client.db(this.dbName).collection(collection).find(filter, { projection }).toArray();
+    async close() {
+        await this.client.close();
+        this.db = null;
     }
 
-    static insertDocument(collection, document) {
-        return this.client.db(this.dbName).collection(collection).insertOne(document);
+    async getDocuments(collectionName, filter = {}, projection = {}) {
+        const db = await this.connect();
+        return await db.collection(collectionName).find(filter, { projection }).toArray();
     }
 
-    static updateDocument(collection, filter, updated) {
-        return this.client.db(this.dbName).collection(collection).updateOne(filter, updated);
+    async insertDocument(collectionName, document) {
+        const db = await this.connect();
+        return await db.collection(collectionName).insertOne(document);
     }
 
-    static deleteDocument(collection, filter) {
-        return this.client.db(this.dbName).collection(collection).deleteOne(filter);
+    async deleteDocument(collection, filter) {
+        const db = await this.connect();
+        return db.collection(collection).deleteOne(filter);
+    }
+
+    async updateDocument(collection, filter, updated) {
+        const db = await this.connect();
+        return db.collection(collection).updateOne(filter, updated);
     }
 }
+
+const dbService = new DBServices();
+
+export default dbService;
