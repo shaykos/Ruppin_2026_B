@@ -1,0 +1,33 @@
+@PORT=1234
+@HOST=localhost
+
+### get all users
+GET http://{{HOST}}:{{PORT}}/api/users/
+
+
+### register user
+POST http://{{HOST}}:{{PORT}}/api/users/register
+Content-Type: application/json
+
+{
+    "password": "1122",
+    "email": "momo@gmail.com"
+}
+
+### login user with Bcrypt
+POST http://{{HOST}}:{{PORT}}/api/users/loginB
+Content-Type: application/json
+
+{
+    "password": "1122",
+    "email": "momo@gmail.com"
+}
+
+### login user with Argon2
+POST http://{{HOST}}:{{PORT}}/api/users/loginA
+Content-Type: application/json
+
+{
+    "password": "1122",
+    "email": "momo@gmail.com"
+}

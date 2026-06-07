@@ -1,0 +1,19 @@
+{
+  "name": "08---bcrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1"
+  }
+}
