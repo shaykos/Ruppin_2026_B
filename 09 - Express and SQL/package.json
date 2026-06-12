@@ -1,0 +1,22 @@
+{
+  "name": "06---multer-and-cloudinary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "routes.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^6.21.0",
+    "mssql": "^12.5.5",
+    "multer": "^2.1.1"
+  }
+}
